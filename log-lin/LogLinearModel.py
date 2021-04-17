@@ -127,7 +127,7 @@ def gradient_loss(X, Y, theta):
 
 # Prepare dataset
 x, y = make_classification(random_state=101)
-print(x)
+print(x.shape)
 print(y.shape)
 
 # model = LogLinearModel(feature_function, 1, 100, loss, gradient_loss, True)
