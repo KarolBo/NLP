@@ -8,7 +8,8 @@
 \usepackage{enumitem}
 \usepackage{parskip}
 \usepackage{graphicx}
-
+\usepackage{fancyvrb}
+\usepackage{alltt}
 \usepackage[top=2.5cm, left=3cm, right=3cm, bottom=4.0cm]{geometry}
 
 \newcommand{\lectureheader}[4]{%
@@ -323,8 +324,70 @@ Since the input values are the same and the weight values are also the same, the
     \item
     \begin{enumerate}[label = (\roman*)]
     \item
-
+    G = <V, E, W>
+    
+    E - associations between two consecutive words
+    
+    W - ???    
+    
+    \begin{Verbatim}[tabsize=4]
+    	def Dijkstra(G, W, src):
+    		# preparation
+    		Q = prior_queue()
+    		dist = map(cardiality(G))
+    		back_ptrs = map(cardiality(G))
+    		for v in G:
+    			if v == src: 
+    				disv[v] = 0
+    			else:
+    				dist[v] = inf
+    			back_ptrs[v] = null
+    			Q.add(src, dist(src))
+    			
+    		#main part
+    		while !Q.is_empty():
+    			u = Q.get_min()
+    			for v in neighbours(u):
+    				d = dist[u] + W[V]
+    				if d < dist[v]:
+    					dist[v] = d
+    					back_ptrs[v] = u
+    					Q.decrease_prior(v, d)
+    		return dist, back_ptrs
+    	\end{Verbatim}
+    	
+    	\item
+    	Dijkstra: $O((|V|+|E|) \cdot log(|V|))$
+    	
+    	Viterbi: $O(T^2 \cdot |S|) = O(|E|)$
+    	
+    	Dijkstra algorithm is faster under the following condition:
+   
+    	 $(|V|+|E|) \cdot log(|V|) < |E|$
+    	
 	\end{enumerate}
+	
+	\item
+	
+	\begin{enumerate}[label = (\roman*)]
+    \item
+       \begin{alltt}
+    	def Dijkstra(G, W, src):
+    	    # preparation
+    	    ...
+    	    #main part
+    	    while !Q.is_empty():
+    	        u = Q.get_min()
+    	        for v in neighbours(u):
+    	            d = \(\bigoplus \)(dist[u] \(\bigotimes \) W[v])
+    	            dist[v] = d
+    	            back_ptrs[v] = arg(d)
+                Q.decrease_prior(v, d)
+    		return dist, back_ptrs
+    	\end{alltt}
+    
+    \end{enumerate}
+ 	    
 \end{enumerate}
 
 
