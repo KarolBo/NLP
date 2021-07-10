@@ -199,31 +199,132 @@ Since the input values are the same and the weight values are also the same, the
     \item
     \begin{enumerate}[label = (\roman*)]
     \item
+    Let's define an auxiliary function $J_w = \begin{cases}
+      1, & \text{if} \; w \; is \; drawn \\
+      0, & \text{otherwise}
+    \end{cases}$
+    
+    The number of unique tokens X is equal to:
+    
+    $X = \sum_{w=1}^{|V|} J_w$
+    
+    Using the linearity of expectations, the expected value of X is equal to:
+    
+    $E[X] = E[\sum_{w=1}^{|V|} J_w] = \sum_{w=1}^{|V|} E[J_w]$
+    
+    where:
+    
+    $E[j_w] = P(J_w = 1) = P(at \;least\; one\; w \;selected) = 1 - P(w \; not \; selected) = 1- \frac{|V|-1}{|V|}$
+    
+    Finally: $X = |V| \cdot (\frac{|V|-1}{|V|})^n$
     
     \item
+    P(all words appear) = 1 - P(at least one w doesn't appear) = $1 - (P(!w_1) \bigcup P(!w_2) \bigcup ... \bigcup P(!w_|V|) = 1 - |\bigcup_{i=1}^{|V|}P(!w_i)|)$ 
+    
+    where '!' denotes that the word is not selected. 
+    The above union can be found using the inclusion-exclusion principle. 
+    
+    $|\bigcup_{i=1}^{|V|}P(!w_i)| = \sum_{J \in \{1,...,|V|\}} (-1)^{|J|+1}|\bigcup_{j \in J}P(!w_i)|) = $
     
 	\end{enumerate}
 	
 	\item
     \begin{enumerate}[label = (\roman*)]
     \item
+    A - expected additional draws if just selected any word other than 'work'
+    
+    B - expected additional draws if just selected 'work'
+
+	A is equal to the initial draw + P(w != 'hard') * A + P(w = 'hard') * B, what yields:
+	
+	$A = 1 + \frac{|V|-1}{|V|} \cdot A + \frac{1}{|V|} \cdot B$   
+	
+	B is equal to one draw in case that we select word 'hard' + P(w != 'hard') * A, what yields: 
+	
+	$B = 1 + \frac{|V|-1}{|V|} \cdot A$
+	
+	Solving the above system of equations in terms of A, we get:
+	
+	$A = \frac{|V|^2-1}{|V|-1}$ 
     
     \item
+    TO DO
     
 	\end{enumerate}
 	
 	\item
     \begin{enumerate}[label = (\roman*)]
     \item
+    A - expected number of draws before the first selection
+    
+    B - expected additional number of draws after at least one word has been selected.
+    
+    A is equal to B + the initial draw:
+    
+    $A=B+1$
+    
+    B is equal to P(w is the same as the previous one) + P(w is different) * A:
+    
+    $B = \frac{1}{|V|} + \frac{|V|-1}{|V|} \cdot A$
+    
+    The solution of the above set of equations in terms of A is:
+    
+    $A = |V|+1$
     
     \item
+    I assume that the input is an integer corresponding to a given word index.
+    
+    $w_0=1$
+    
+    $w_1=-1$
+    
+    $w_2=0$
+    
+    $w_0=0$
+    
+    $b_0=0$
+    
+    $f(x)=\begin{cases}
+      1, & \text{if} \; x=0\\
+      0, & \text{otherwise}
+    \end{cases}$
+    
+    $g(x) = x$
     
     \item
+    $w_3=1$
+    
+    $w_4=1$
+    
+    $w_5=1$
+    
+    $b_2=0$
+    
+    $b_0=0$
+    
+    $g(x) = x$
+    
+    $h(x) = x$
+    
+    A non-linear activation is required because the output cannot be express as a linear function of the inputs. It is similar to the XOR problem. 
     
     \item
+    A non-uniform has a yields greater chances of sequentially drawing the same token. 
+    In can be intuitively depicted using an extreme case, when always the same word is drawn. 
     
 	\end{enumerate}
     
+\end{enumerate}
+
+
+
+\section*{Question 5} 
+\begin{enumerate}[label = (\alph*)]
+    \item
+    \begin{enumerate}[label = (\roman*)]
+    \item
+
+	\end{enumerate}
 \end{enumerate}
 
 
