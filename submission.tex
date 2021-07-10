@@ -1,0 +1,169 @@
+\documentclass{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{graphicx}
+
+\usepackage[top=2.5cm, left=3cm, right=3cm, bottom=4.0cm]{geometry}
+
+\newcommand{\lectureheader}[4]{%
+  \begin{minipage}{.3\textwidth}%
+    
+    \strut\includegraphics[width=\textwidth]{figures/ethlogo.pdf}%
+  \end{minipage} \hfill%
+  \raisebox{1.5mm}{%
+    \begin{minipage}{0.69\textwidth}\sf\flushright%
+        \textbf{\Huge #3}\mbox{\hspace{2mm}}\\#4\mbox{\hspace{2mm}}%
+    \end{minipage}%
+  }\\[-2mm]\hrule%
+  \begin{minipage}[t]{0.5\textwidth}\sf\textit{#1} \end{minipage} \hfill%
+  \begin{minipage}[t]{0.5\textwidth}\sf\flushright \textit{#2}\end{minipage}%
+  \par%
+}
+
+% Create commands for syntax that you will frequently use
+\newcommand{\xx}{\mathbf x}
+
+\begin{document}
+\begin{titlepage} 
+
+\lectureheader{Prof. Ryan Cotterell}
+{}
+{\Large Natural Language Processing}{Spring 2021}
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+	
+	\center % Centre everything on the page
+	{\Huge Course Assignment}\\
+      \quad\newline
+	
+	{\large\today} \\
+	\quad\newline
+	%	Author
+	%------------------------------------------------
+	
+	{\Large Karol Borkowski \\ \emph{nethz} Username: kborkowski \\ Student ID: 00000000}\\[0.5cm] 
+	\vfill
+	{\large \textbf{Collaborators:} \\
+	Other student 1 \\
+	Other student 2}
+	
+	\vfill\vfill\vfill 
+	By submitting this work, I verify that it is my own. That is, I have written my own solutions to each problem for which I am submitting an answer. I have listed above all others with whom I have discussed these answers.
+	
+	\vfill 
+	
+\end{titlepage}
+
+
+
+%%%%%%%%%%%%%%%%%
+%   Problem 1   %
+%%%%%%%%%%%%%%%%%
+\part{Course Assignment Episode 1}
+
+\section*{Question 1} 
+\begin{enumerate}[label = (\alph*)]
+    \item
+    
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=1.5]{figures/backprop.jpg}
+    \caption{The computation graph of f.}
+    \label{fig:roller-coaster}
+\end{figure}
+
+$a_1 = x_1 \cdot w_{11}^1$
+$b_1 = x_2 \cdot w_{21}^1$
+$c_1 = x_3 \cdot w_{31}^1$
+
+$d_1=a_1 + b_1 + c_1$
+
+$h_1 = ReLu(d_1)$
+
+$a_2 = x_1 \cdot w_{12}^1$
+$b_2 = x_2 \cdot w_{22}^1$
+$c_2 = x_3 \cdot w_{32}^1$
+
+$d_2=a_2 + b_2 + c_2$
+
+$h_2 = ReLu(d_2)$
+
+$a_3 = h_1 \cdot w_{11}^2$
+$b_3 = h_2 \cdot w_{21}^2$
+
+$d_3=a_3 + b_3$
+
+$y=\sigma(d_3)$
+
+\item 
+	\begin{enumerate}[label = (\roman*)]
+		\item
+		
+		\item
+		
+		\item
+		
+		\item
+		
+	\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+
+\clearpage
+\newpage
+
+\begin{table}[h]
+        \centering
+        \fontsize{10}{10}\selectfont
+        \renewcommand{\arraystretch}{1.2} % vertical padding
+        \setlength{\tabcolsep}{0.5em} % for the horizontal padding
+        \begin{tabular}{l|l|l|l}
+        \textbf{number} & \textbf{sample strings} & \textbf{accepted} & \textbf{weight} \\ \hline
+        1 & educational is this not &  &  \\
+        2 & is this assignment educational &  &  \\
+        3 & not educational is not educational &  &  \\
+        4 & this assignment is not educational &  &  \\
+        5 & is this assignment educational &  &  \\
+        6 & this assignment course is educational &  &  \\
+        7 & is this assignment not educational &  &  \\
+        8 & this assignment not &  &  \\
+        9 & this course assignment is not educational &  &  \\
+        10 & this course is not not educational &  &  \\
+        11 & not educational is this &  &  \\
+        12 & course assignment is not educational &  &  \\
+        13 & not this assignment is educational &  &  \\
+        14 & not not not educational &  &  \\
+        14 & is this course assignment not educational &  &  \\
+        15 & course assignment is this &  &  \\
+        16 & this course is interesting &  &  \\
+        17 & this course assignment not educational &  & 
+        \end{tabular}
+        \caption{Some strings from $\mathcal{Y}_{\geq 2, \leq 6}$}
+        \label{tab:wfst_strings}
+        \end{table}
+        
+\begin{figure}[!h]
+        \centering
+        \includegraphics[width=1.0\textwidth]{./figures/wfst_charts_1.pdf}
+        % \includegraphics[width=.45\linewidth]{./fig/C1000.png}
+        \caption{Floyd-Warshall algorithm, iteration 0 to 3; left column matrix should contain weights after iteration n; right column matrix should be iteratively filled for backtracking each path}
+        \label{fig:wfst_charts_1}
+    \end{figure} 
+    
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=1.0\textwidth]{./figures/wfst_charts_2.pdf}
+        % \includegraphics[width=.45\linewidth]{./fig/C1000.png}
+        \caption{Floyd-Warshall algorithm, iteration 4 to 7; left column matrix should contain weights after iteration n; right column matrix should be iteratively filled for backtracking each path}
+        \label{fig:wfst_charts_2}
+    \end{figure} 
+\end{document}
