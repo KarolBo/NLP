@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6.28) (preloaded format=pdflatex 2021.7.10)  10 JUL 2021 13:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6.28) (preloaded format=pdflatex 2021.7.10)  10 JUL 2021 14:50
 entering extended mode
 **./submission.tex
 (submission.tex
@@ -350,63 +350,61 @@ go.pdf>]
 <figures/backprop.jpg, id=16, 287.95078pt x 185.94469pt>
 File: figures/backprop.jpg Graphic file (type jpg)
 <use figures/backprop.jpg>
-Package pdftex.def Info: figures/backprop.jpg  used on input line 75.
+Package pdftex.def Info: figures/backprop.jpg  used on input line 71.
 (pdftex.def)             Requested size: 431.92511pt x 278.91632pt.
- [1 <./figures/backprop.jpg>] [2]
-<./figures/wfst_charts_1.pdf, id=26, 2844.6275pt x 4266.94125pt>
+ [1 <./figures/backprop.jpg>] [2] [3]
+<./figures/wfst_charts_1.pdf, id=33, 2844.6275pt x 4266.94125pt>
 File: ./figures/wfst_charts_1.pdf Graphic file (type pdf)
 <use ./figures/wfst_charts_1.pdf>
-Package pdftex.def Info: ./figures/wfst_charts_1.pdf  used on input line 156.
+Package pdftex.def Info: ./figures/wfst_charts_1.pdf  used on input line 265.
 (pdftex.def)             Requested size: 443.57848pt x 665.34067pt.
 
 
-LaTeX Warning: Float too large for page by 91.25803pt on input line 160.
+LaTeX Warning: Float too large for page by 91.25803pt on input line 269.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figures/wfst_charts_2.pdf, id=27, 2844.6275pt x 4266.94125pt>
+<./figures/wfst_charts_2.pdf, id=34, 2844.6275pt x 4266.94125pt>
 File: ./figures/wfst_charts_2.pdf Graphic file (type pdf)
 <use ./figures/wfst_charts_2.pdf>
-Package pdftex.def Info: ./figures/wfst_charts_2.pdf  used on input line 164.
+Package pdftex.def Info: ./figures/wfst_charts_2.pdf  used on input line 273.
 (pdftex.def)             Requested size: 443.57848pt x 665.34067pt.
 
-LaTeX Warning: Float too large for page by 91.25803pt on input line 168.
+LaTeX Warning: Float too large for page by 91.25803pt on input line 277.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3
+[4
 
-] [4 <./figures/wfst_charts_1.pdf>] [5 <./figures/wfst_charts_2.pdf>]
-(submission.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] [5 <./figures/wfst_charts_1.pdf>] [6 <./figures/wfst_charts_2.pdf>]
+(submission.aux) ) 
 Here is how much of TeX's memory you used:
  4921 strings out of 478847
  69245 string characters out of 2858243
- 403546 words of memory out of 3000000
+ 408546 words of memory out of 3000000
  22793 multiletter control sequences out of 15000+600000
  409143 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,8n,66p,526b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pro
-gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on submission.pdf (6 pages, 392896 bytes).
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/
+Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmssi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on submission.pdf (7 pages, 418369 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
+ 188 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
