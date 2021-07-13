@@ -7,19 +7,13 @@ weights = [[0, 1, 2, inf, inf, inf],
            [inf, inf, inf, inf, 0, 2],
            [inf, inf, inf, 3, inf, 0]]
 
-# pointers = [['a', 'b', 'c', None, None, None],
-#             [None, 'b', None, 'd', 'e', None],
-#             [None, 'b', 'c', 'd', 'e', None],
-#             ['a', None, None, 'd', None, 'f'],
-#             [None, None, None, None, 'e', 'f'],
-#             [None, None, None, 'd', None, 'f']]
+pointers = [['a', 'b', 'c', None, None, None],
+            [None, 'b', None, 'd', 'e', None],
+            [None, 'b', 'c', 'd', 'e', None],
+            ['a', None, None, 'd', 'e', 'f'],
+            [None, None, None, None, 'e', 'f'],
+            [None, None, None, 'd', None, 'f']]
 
-pointers = [[None, None, None, None, None, None],
-            [None, None, None, None, None, None],
-            [None, None, None, None, None, None],
-            [None, None, None, None, None, None],
-            [None, None, None, None, None, None],
-            [None, None, None, None, None, None]]
 
 n = len(weights)
 
@@ -36,13 +30,12 @@ for k in range(n):
             if weights[i][j] > weights[i][k] + weights[k][j]:
                 weights[i][j] = weights[i][k] + weights[k][j]
                 pointers[i][j] = pointers[i][k]
-    print('Iteration:', k)
-    for row in weights:
-        print(row)
-    print()
-    for row in pointers:
-        print(row)
-    print()
+for row in weights:
+    print(row)
+print()
+for row in pointers:
+    print(row)
+print()
 
 
 def get_path(u, v):

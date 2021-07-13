@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{fancyvrb}
 \usepackage{alltt}
+\usepackage{float}
 \usepackage[top=2.5cm, left=3cm, right=3cm, bottom=4.0cm]{geometry}
 
 \newcommand{\lectureheader}[4]{%
@@ -47,11 +48,10 @@
 	%	Author
 	%------------------------------------------------
 	
-	{\Large Karol Borkowski \\ \emph{nethz} Username: kborkowski \\ Student ID: 00000000}\\[0.5cm] 
+	{\Large Karol Borkowski \\ \emph{nethz} Username: kborkowski \\ Student ID: 20-905-501}\\[0.5cm] 
 	\vfill
 	{\large \textbf{Collaborators:} \\
-	Other student 1 \\
-	Other student 2}
+	Sven Kohler}
 	
 	\vfill\vfill\vfill 
 	By submitting this work, I verify that it is my own. That is, I have written my own solutions to each problem for which I am submitting an answer. I have listed above all others with whom I have discussed these answers.
@@ -71,7 +71,6 @@
     \centering
     \includegraphics[scale=1.5]{figures/backprop.jpg}
     \caption{The computation graph of f.}
-    \label{fig:roller-coaster}
 \end{figure}
 
 $a_1 = x_1 \cdot w_{11}^1 \; \;$
@@ -194,7 +193,8 @@ Since the input values are the same and the weight values are also the same, the
 
 
 
-
+\clearpage
+\newpage
 \section*{Question 4} 
 \begin{enumerate}[label = (\alph*)]
     \item
@@ -217,7 +217,7 @@ Since the input values are the same and the weight values are also the same, the
     
     $E[j_w] = P(J_w = 1) = P(at \;least\; one\; w \;selected) = 1 - P(w \; not \; selected) = 1- \frac{|V|-1}{|V|}$
     
-    Finally: $X = |V| \cdot (\frac{|V|-1}{|V|})^n$
+    Finally: $X = |V| \cdot (1 - \frac{|V|-1}{|V|})^n$
     
     \item
     P(all words appear) = 1 - P(at least one w doesn't appear) = $1 - (P(!w_1) \bigcup P(!w_2) \bigcup ... \bigcup P(!w_|V|) = 1 - |\bigcup_{i=1}^{|V|}P(!w_i)|)$ 
@@ -225,7 +225,7 @@ Since the input values are the same and the weight values are also the same, the
     where '!' denotes that the word is not selected. 
     The above union can be found using the inclusion-exclusion principle. 
     
-    $|\bigcup_{i=1}^{|V|}P(!w_i)| = \sum_{J \in \{1,...,|V|\}} (-1)^{|J|+1}|\bigcup_{j \in J}P(!w_i)|) = $
+    $|\bigcup_{i=1}^{|V|}P(!w_i)| = \sum_{J \in \{1,...,|V|\}} (-1)^{|J|+1}|\bigcup_{j \in J}P(!w_i)|) $
     
 	\end{enumerate}
 	
@@ -249,7 +249,18 @@ Since the input values are the same and the weight values are also the same, the
 	$A = \frac{|V|^2-1}{|V|-1}$ 
     
     \item
-    TO DO
+    Probability that the word "work" is selected in n draws is equal to 1 - probability that it is not selected. 
+    
+    $P('work' 
+   \; selectes) = 1 - P('work' \; not \; selected) = 1 - (\frac{|V|-1}{|V|})^n$
+   
+   To find the expected number of draws let's put 0.95 for P and solve the above equation for variable n:
+   
+   $1 - (\frac{|V|-1}{|V|})^n \geq 0.95$
+   
+   $(\frac{|V|-1}{|V|})^n \leq 0.05$
+   
+   $n \leq log_{\frac{|V|-1}{|V|}}(0.05)$
     
 	\end{enumerate}
 	
@@ -318,17 +329,21 @@ Since the input values are the same and the weight values are also the same, the
 \end{enumerate}
 
 
-
+\clearpage
+\newpage
 \section*{Question 5} 
 \begin{enumerate}[label = (\alph*)]
     \item
     \begin{enumerate}[label = (\roman*)]
     \item
-    G = <V, E, W>
+    G = $<V, E, W>$
     
     E - associations between two consecutive words
     
-    W - ???    
+    W = $score_{w} - score_{max}, \; for \; each \; w \; \in \; vocabulary $  
+    
+    To solve the decoding problem we need to find the highest scoring path, what is equivalent to finding the longest path on a graph with negative weights. The negativity of the weights is ensured using the above transformation for W. 
+    The following algorithm is guaranteed to work only in the case of a directed trelis.
     
     \begin{Verbatim}[tabsize=4]
     	def Dijkstra(G, W, src):
@@ -383,60 +398,250 @@ Since the input values are the same and the weight values are also the same, the
     	            dist[v] = d
     	            back_ptrs[v] = arg(d)
                 Q.decrease_prior(v, d)
-    		return dist, back_ptrs
+         return dist, back_ptrs
     	\end{alltt}
+    	
+    Used semiring: 
+    
+    In case of positive weights and the shortest path: $<R^+ \bigcup \{\inf\}, min, +, \inf, 0>$
+    
+    The case of the longest path and negative weights is shown in thpoint ii).     
+    
+    \item
+    $<R^- \bigcup \{- \inf\}, max, +, -\inf, 0>$
+    
+    \item
+    $<R^+ \bigcup \{\inf\}, max, min, 0, \inf>$
     
     \end{enumerate}
  	    
 \end{enumerate}
 
+\clearpage
+\newpage
+\part{Course Assignment Episode 2}
+
+\section*{Question 1} 
+\begin{enumerate}[label = (\alph*)]
+    \item
+    $<N, \Sigma, R, S>$
+    
+    N = {NP, VP, PP, V, NP, Det, N, P}
+    
+    $\Sigma$ = {I, draw, a, man, with, pencil, hit, ball, an, umbrella, glasses}
+    
+    R:  
+    
+    $S \to NP \;\; VP$
+    
+    $NP \to Det \;\; N$
+    
+    $NP \to Np \;\; PP$
+    
+    $V \to VP \;\; PP$
+    
+    $VP \to V \;\; NP$
+    
+    $PP \to P \;\; NP$
+    
+    $NP \to J \; | \; glasses$
+    
+    $V \to draw \; | \; hit$
+    
+    $Det \to a \; | \; an$
+    
+    $N \to man \; | \; pencil \; | \; ball \; | \; umbrella$
+    
+    $P \to with$
+    
+    \item
+    $S \to NP \;\; VP$: 1
+    
+    $NP \to Det \;\; N$: 1/2
+    
+    $NP \to Np \;\; PP$: 1/7
+    
+    $NP \to J$: 2/7
+    
+    $NP \to glasses$: 1/14
+    
+    $V \to draw$: 1/2
+    
+    $V \to hit$: 1/2
+    
+    $Det \to a$: 6/7
+    
+    $Det \to an$: 1/7
+    
+    $N \to man$: 4/7
+    
+    $N \to pencil$: 1/7
+    
+    $N \to ball$: 1/7
+    
+    $N \to umbrella$: 1/7
+    
+    $P \to with$: 1
+    
+    $PP \to P \;\; NP$: 1
+    
+    $VP \to VP \;\; PP$: 1/3
+    
+    $VP \to V \;\; NP$: 2/3
+    
+    
+    
+    \item
+    To capture different expansions of NP, we introduce the the following rules:
+    
+    $NP \to N$ and $N \to J$
+    
+    The new PCFG is:
+    
+    $S \to NP \;\; VP$: 1
+    
+    $NP \to Det \;\; N$: 1/2
+    
+    $NP \to Np \;\; PP$: 1/7
+    
+    $NP \to N$: 5/14
+    
+    $V \to draw$: 1/2
+    
+    $V \to hit$: 1/2
+    
+    $Det \to a$: 6/7
+    
+    $Det \to an$: 1/7
+    
+    $N \to man$: 4/12
+    
+    $N \to pencil$: 1/12
+    
+    $N \to ball$: 1/12
+    
+    $N \to umbrella$: 1/12
+    
+    $N \to J$: 5/12 
+    
+    $P \to with$: 1
+    
+    $PP \to P \;\; NP$: 1
+    
+    $VP \to VP \;\; PP$: 1/3
+    
+    $VP \to V \;\; NP$: 2/3
+     
+	\begin{figure}[H]
+	\item
+    \centering
+    \includegraphics[scale=1.5]{figures/tree.jpg}
+    \caption{The parse tree for the sentence “I hit a man with glasses” with 		lexicalized rules.}
+	\end{figure}
+	
+	\item
+	The time complexity of CKY algorithm is $O(n^3 \cdot |G|)$, 
+	where n is the length of the parsed string and $|G|$ is the size of the CNF grammar G.
+	
+	The modifications from parts c) and d) increases the number of the grammar rules $|G|$ and therefore the time of the algorithm execution. Nevertheless, the order expressed by the big-O notation is the same. 
+	
+	The space complexity of the CKY algorithm is determined by the size of the used matrix, which is: $O(n^2)$
+     
+\end{enumerate}
+
 
 \clearpage
 \newpage
+\section*{Question 2} 
+\begin{enumerate}[label = (\alph*)]
+    \item
+    Let's create a lexicalized production for each $\psi(i \to j)$,
+     
+    where i $<$ j: 
+    
+    $X(w_i) \to X(w_i)X(w_j) \; : \; \psi(i \to j)$,
+    
+    where i $>$ j: 
+    
+    $X(w_i) \to X(w_j)X(w_i) \; : \; \psi(i \to j)$
+    
+    and for each $\psi(root \to j)$:
+    
+    $S \to X(w_j) \; : \; \psi(root \to j)$
+    
+    \item
+    Let's consider all possible dependency parses and their associated
+derivations in the lexicalized CFG:
 
+	$\psi_\tau(y^1) = \psi_\tau(S \to X(They)) + \psi_\tau(X(They) \to X(They X(fish))) = \psi(root \to 1) + \psi(1 \to 2) = \Psi(1 \to 2)$
+	
+		$\psi_\tau(y^2) = \psi_\tau(S \to X(fish)) + \psi_\tau(X(fish) \to X(They X(fish))) = \psi(root \to 2) + \psi(2 \to 1) = \Psi(2 \to 1)$
+    
+\end{enumerate}
+
+\clearpage
+\newpage
+\section*{Question 4} 
+
+\begin{enumerate}[label = (\alph*)]
+    
 \begin{table}[h]
+\item
         \centering
         \fontsize{10}{10}\selectfont
         \renewcommand{\arraystretch}{1.2} % vertical padding
         \setlength{\tabcolsep}{0.5em} % for the horizontal padding
         \begin{tabular}{l|l|l|l}
         \textbf{number} & \textbf{sample strings} & \textbf{accepted} & \textbf{weight} \\ \hline
-        1 & educational is this not &  &  \\
-        2 & is this assignment educational &  &  \\
-        3 & not educational is not educational &  &  \\
-        4 & this assignment is not educational &  &  \\
-        5 & is this assignment educational &  &  \\
-        6 & this assignment course is educational &  &  \\
-        7 & is this assignment not educational &  &  \\
-        8 & this assignment not &  &  \\
-        9 & this course assignment is not educational &  &  \\
-        10 & this course is not not educational &  &  \\
-        11 & not educational is this &  &  \\
-        12 & course assignment is not educational &  &  \\
-        13 & not this assignment is educational &  &  \\
-        14 & not not not educational &  &  \\
-        14 & is this course assignment not educational &  &  \\
-        15 & course assignment is this &  &  \\
-        16 & this course is interesting &  &  \\
-        17 & this course assignment not educational &  & 
+        1 & educational is this not & NO &  \\
+        2 & is this assignment educational & NO  &  \\
+        3 & not educational is not educational & YES  & 12  \\
+        4 & this assignment is not educational &  YES & 9  \\
+        5 & is this assignment educational & NO &  \\
+        6 & this assignment course is educational & NO  &  \\
+        7 & is this assignment not educational & YES & 15  \\
+        8 & this assignment not & YES & 8  \\
+        9 & this course assignment is not educational & YES & 12  \\
+        10 & this course is not not educational & YES & 21 \\
+        11 & not educational is this & YES & 11 \\
+        12 & course assignment is not educational & YES & 10 \\
+        13 & not this assignment is educational & NO &  \\
+        14 & not not not educational & YES & 25 \\
+        14 & is this course assignment not educational & YES & 25 \\
+        15 & course assignment is this & 15 & 8 \\
+        16 & this course is interesting & NO &  \\
+        17 & this course assignment not educational & YES & 14
         \end{tabular}
         \caption{Some strings from $\mathcal{Y}_{\geq 2, \leq 6}$}
         \label{tab:wfst_strings}
         \end{table}
-        
-\begin{figure}[!h]
+      
+\begin{figure}[H]
+		\item
         \centering
-        \includegraphics[width=1.0\textwidth]{./figures/wfst_charts_1.pdf}
+        \includegraphics[width=1.0\textwidth]{./figures/floyd1.jpg}
         % \includegraphics[width=.45\linewidth]{./fig/C1000.png}
         \caption{Floyd-Warshall algorithm, iteration 0 to 3; left column matrix should contain weights after iteration n; right column matrix should be iteratively filled for backtracking each path}
         \label{fig:wfst_charts_1}
     \end{figure} 
     
-    \begin{figure}[!h]
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=1.0\textwidth]{./figures/wfst_charts_2.pdf}
+        \includegraphics[width=1.0\textwidth]{./figures/floyd2.jpg}
         % \includegraphics[width=.45\linewidth]{./fig/C1000.png}
         \caption{Floyd-Warshall algorithm, iteration 4 to 7; left column matrix should contain weights after iteration n; right column matrix should be iteratively filled for backtracking each path}
         \label{fig:wfst_charts_2}
     \end{figure} 
+    
+	\item
+	The number of iterations is bound by the number of nodes. It terminates after n=$|V|$
+	
+	\item    
+	Time complexity: three for loops $=> \; O(n^3)$
+	
+	Space complexity: size of the matrices = $ 2 \cdot n^2 \; => \; O(n^2)$
+	
+	Backtracking: Maximal when all edges are included into the path $=> \; O(|E|)$
+    
+    \end{enumerate}
 \end{document}

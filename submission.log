@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6.28) (preloaded format=pdflatex 2021.7.10)  10 JUL 2021 19:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6.28) (preloaded format=pdflatex 2021.7.10)  13 JUL 2021 20:49
 entering extended mode
 **./submission.tex
 (submission.tex
@@ -228,6 +228,14 @@ Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
 (C:\Program Files\MiKTeX\tex/latex/base\alltt.sty
 Package: alltt 2021/01/29 v2.0g defines alltt environment
 )
+(C:\Program Files\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count281
+\float@exts=\toks28
+\float@box=\box56
+\@float@everytoks=\toks29
+\@floatcapt=\box57
+)
 (C:\Program Files\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -237,9 +245,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count281
-\Gm@cntv=\count282
-\c@Gm@tempcnt=\count283
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
 \Gm@bindingoffset=\dimen172
 \Gm@wd@mp=\dimen173
 \Gm@odd@mp=\dimen174
@@ -248,44 +256,44 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layoutheight=\dimen177
 \Gm@layouthoffset=\dimen178
 \Gm@layoutvoffset=\dimen179
-\Gm@dimlist=\toks28
+\Gm@dimlist=\toks30
 
 (C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count284
-\l__pdf_internal_box=\box56
+\l__color_backend_stack_int=\count285
+\l__pdf_internal_box=\box58
 )
 (submission.aux)
 \openout1 = `submission.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
  (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count285
+\scratchcounter=\count286
 \scratchdimen=\dimen180
-\scratchbox=\box57
-\nofMPsegments=\count286
-\nofMParguments=\count287
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count288
+\scratchbox=\box59
+\nofMPsegments=\count287
+\nofMParguments=\count288
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count289
 \MPscratchDim=\dimen181
-\MPnumerator=\count289
-\makeMPintoPDFobject=\count290
-\everyMPtoPDFconversion=\toks30
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
+\everyMPtoPDFconversion=\toks32
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -331,27 +339,27 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 <figures/ethlogo.pdf, id=1, 192.72pt x 57.21375pt>
 File: figures/ethlogo.pdf Graphic file (type pdf)
 <use figures/ethlogo.pdf>
-Package pdftex.def Info: figures/ethlogo.pdf  used on input line 38.
+Package pdftex.def Info: figures/ethlogo.pdf  used on input line 39.
 (pdftex.def)             Requested size: 133.07489pt x 39.50632pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 38--38
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
 
  []
 
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 38.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 39.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 38--38
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 39--39
 [][]  [] 
  []
 
@@ -364,7 +372,7 @@ File: figures/backprop.jpg Graphic file (type jpg)
 <use figures/backprop.jpg>
 Package pdftex.def Info: figures/backprop.jpg  used on input line 72.
 (pdftex.def)             Requested size: 431.92511pt x 278.91632pt.
- [1 <./figures/backprop.jpg>] [2]
+ [1 <./figures/backprop.jpg>] [2] [3]
 Overfull \hbox (33.20158pt too wide) in paragraph at lines 223--224
 []\OT1/cmr/m/n/10 P(all words ap-pear) = 1 - P(at least one w doesn't ap-pear) 
 = $1 \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (!\O
@@ -373,61 +381,71 @@ ML/cmm/m/it/10 w[]\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (!\OML
 !\OML/cmm/m/it/10 w[]V\OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 ) =
  []
 
-[3] [4] [5]
-<./figures/wfst_charts_1.pdf, id=41, 2844.6275pt x 4266.94125pt>
-File: ./figures/wfst_charts_1.pdf Graphic file (type pdf)
-<use ./figures/wfst_charts_1.pdf>
-Package pdftex.def Info: ./figures/wfst_charts_1.pdf  used on input line 429.
-(pdftex.def)             Requested size: 443.57848pt x 665.34067pt.
+[4
+
+] [5] [6
+
+] [7] [8
+
+]
+<figures/tree.jpg, id=52, 205.89423pt x 201.00093pt>
+File: figures/tree.jpg Graphic file (type jpg)
+<use figures/tree.jpg>
+Package pdftex.def Info: figures/tree.jpg  used on input line 538.
+(pdftex.def)             Requested size: 308.84056pt x 301.50064pt.
+ [9] [10 <./figures/tree.jpg>] [11
+
+]
+<./figures/floyd1.jpg, id=62, 398.23781pt x 570.63188pt>
+File: ./figures/floyd1.jpg Graphic file (type jpg)
+<use ./figures/floyd1.jpg>
+Package pdftex.def Info: ./figures/floyd1.jpg  used on input line 622.
+(pdftex.def)             Requested size: 443.57848pt x 635.62051pt.
+ [12
+
+]
+Overfull \vbox (61.53787pt too high) has occurred while \output is active []
 
 
-LaTeX Warning: Float too large for page by 91.25803pt on input line 433.
+[13 <./figures/floyd1.jpg>]
+<./figures/floyd2.jpg, id=71, 395.22656pt x 575.14874pt>
+File: ./figures/floyd2.jpg Graphic file (type jpg)
+<use ./figures/floyd2.jpg>
+Package pdftex.def Info: ./figures/floyd2.jpg  used on input line 630.
+(pdftex.def)             Requested size: 443.57848pt x 645.52249pt.
+
+Overfull \vbox (71.43985pt too high) has occurred while \output is active []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./figures/wfst_charts_2.pdf, id=42, 2844.6275pt x 4266.94125pt>
-File: ./figures/wfst_charts_2.pdf Graphic file (type pdf)
-<use ./figures/wfst_charts_2.pdf>
-Package pdftex.def Info: ./figures/wfst_charts_2.pdf  used on input line 437.
-(pdftex.def)             Requested size: 443.57848pt x 665.34067pt.
-
-LaTeX Warning: Float too large for page by 91.25803pt on input line 441.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6
-
-] [7 <./figures/wfst_charts_1.pdf>] [8 <./figures/wfst_charts_2.pdf>]
-(submission.aux) ) 
+[14 <./figures/floyd2.jpg>] [15] (submission.aux) ) 
 Here is how much of TeX's memory you used:
- 5323 strings out of 478847
- 75557 string characters out of 2858243
- 418208 words of memory out of 3000000
- 23187 multiletter control sequences out of 15000+600000
+ 5395 strings out of 478847
+ 76388 string characters out of 2858243
+ 417574 words of memory out of 3000000
+ 23254 multiletter control sequences out of 15000+600000
  409311 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,66p,526b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx1
-0.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
-/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmtt10.pfb>
-Output written on submission.pdf (9 pages, 461186 bytes).
+ 57i,10n,66p,526b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Program Files/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmsy5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Fil
+es/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on submission.pdf (16 pages, 696530 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
+ 156 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
